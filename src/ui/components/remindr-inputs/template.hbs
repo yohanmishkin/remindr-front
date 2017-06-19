@@ -1,0 +1,30 @@
+<div class="remindr-inputs">
+    <fieldset>
+        <label>What do you want to be reminded of?</label>
+        <input placeholder="Message" class='message' type="text" />
+    </fieldset>
+
+    <fieldset>
+        <label>When do you want us to remind you?</label>
+        <input placeholder="When" class='date' type="date" />
+    </fieldset>
+
+    <fieldset>
+        <label>What number do you want us to call?</label>
+        <input placeholder="Phone #" class='phone' type="tel" />
+    </fieldset>
+    {{!--<button onclick={{action scheduleRemindr}}>Schedule</button>--}}
+
+    <form action="https://d5go6mao4a.execute-api.us-east-1.amazonaws.com/dev" method="POST">
+        <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_1Q4dri4VLB3OrQEQ8SbJiKa3"
+            data-amount="100"
+            data-label="Schedule"
+            data-name="remindr.io"
+            data-description="1 remindr"
+            {{!--data-image="https://stripe.com/img/documentation/checkout/marketplace.png"--}}
+            data-locale="auto">
+        </script>
+    </form>
+</div>
