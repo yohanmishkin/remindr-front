@@ -6,22 +6,20 @@
             animate question and progress bar }--> 
 
 <div class="remindr-inputs">
-  <p>{{currentQuestion}}</p>
-  <form>
-    <ol>
+  <div class="questions">
+    <p>{{currentQuestion}}</p>
+    <input type="text" />
+<!--     <ol>
       {{#each questions key="@index" as |question|}}
         <li>
           <span><label>{{question}}</label></span>
-          <input class='message' type="text" />
         </li>
       {{/each}}
     </ol>
-    <div class="controls">
-      <button onclick={{action next}} class="next-question"></button>
-      <span class="question-numbers">
-        <span class="current-question-number"></span>
-        <span class="total-question-number"></span>
-      </span>
-    </div>
-  </form>
+ -->  </div>
+  <div class="controls">
+    <button onclick={{action next}} class="next-question">Next</button>
+    <progress value="{{questionNumber}}" max="4"></progress>
+    <span class="current-question-number">{{questionNumber}} / 3</span>
+  </div>
 </div>
