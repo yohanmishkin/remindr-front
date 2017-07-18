@@ -3,7 +3,7 @@ import Component, { tracked } from '@glimmer/component';
 export default class RemindrInputs extends Component {
   @tracked current = 0;
   questions = [
-    'What are you trying not to forget?',
+    'What do you want us to remind you about?',
     'When do you want to be reminded?',
     'What phone number should we call?'
   ];

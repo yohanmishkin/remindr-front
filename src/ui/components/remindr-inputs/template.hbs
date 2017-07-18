@@ -7,19 +7,14 @@
 
 <div class="remindr-inputs">
   <div class="questions">
-    <p>{{currentQuestion}}</p>
+    <span class="question">{{currentQuestion}}</span>
     <input type="text" autofocus />
-<!--     <ol>
-      {{#each questions key="@index" as |question|}}
-        <li>
-          <span><label>{{question}}</label></span>
-        </li>
-      {{/each}}
-    </ol>
- -->  </div>
-  <div class="controls">
-    <button onclick={{action next}} class="next-question">Next</button>
-    <progress value="{{questionNumber}}" max="4"></progress>
-    <span class="current-question-number">{{questionNumber}} / 3</span>
+    <div class="controls">
+      <button onclick={{action next}} class="next-question">
+        <i class="material-icons">keyboard_arrow_right</i>
+      </button>
+      <progress value="{{questionNumber}}" max="4"></progress>
+      <span class="current-question-number">{{questionNumber}} / 3</span>
+    </div>
   </div>
 </div>
