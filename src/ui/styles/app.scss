@@ -1,70 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Lato|Material+Icons');
-
-.remindr-inputs {
-  position: relative;
-  margin: 0 auto;
-  max-width: 860px;
-  width: 100%;
-  text-align: left;
-  font-size: 2rem;
-
-  .question {
-    transition: visibility 0s 0.4s, height 0s 0.4s;
-  }
-
-  input {
-    padding: 0.5em 2.6rem 0.5em 0.7em;
-    width: calc(100% - 2em);
-    border: none;
-    background-color: rgba(0,0,0,0.1);
-    color: rgba(0,0,0,0.8);
-    font-size: 1em;
-    line-height: 3rem;
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s;
-  }
-
-  .controls {
-    display: flex;
-    flex-direction: column;
-
-    .next-question {
-      position: absolute;
-      right: 0;
-      bottom: 3.3rem;
-      padding-right: 0;
-      transition: transform 0.3s, opacity 0.3s;
-      border: none;
-      background: transparent;
-      color: rgba(0,0,0,0.5);
-
-      &:hover {
-        color: rgba(0,0,0,0.8);
-      }
-
-      i {
-        font-size: 3rem;
-      }
-    }
-
-    progress {
-      height: 0.4rem;
-      width: 100%;
-      background: rgba(0,0,0,0.3);
-      -webkit-transition: width 0.4s ease-in-out;
-      transition: width 0.4s ease-in-out;
-    }
-
-    .current-question-number {
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
-  }
-}
-
-
-
-/*fun*/
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 * {
   font-family: 'karla', sans-serif;
@@ -374,5 +308,72 @@ p.paragraph {
   .feature3 .col-4:not(:nth-of-type(1)) {
     width: 100%;
     margin-top: 30px;
+  }
+}
+
+
+
+
+.remindr-inputs {
+  position: relative;
+  margin: 0 auto;
+  max-width: 860px;
+  width: 100%;
+  text-align: left;
+  font-size: 2rem;
+
+  .question {
+    transition: visibility 0s 0.4s, height 0s 0.4s;
+  }
+
+  input {
+    padding: 0.5em 2.6rem 0.5em 0.7em;
+    width: 100%;
+    border: none;
+    background-color: rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.8);
+    font-size: 1em;
+    line-height: 3rem;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+
+    .next-question {
+      position: absolute;
+      right: 0;
+      bottom: 3.3rem;
+      padding-right: 0;
+      transition: transform 0.3s, opacity 0.3s;
+      border: none;
+      background: transparent;
+      color: rgba(0,0,0,0.5);
+
+      &:hover {
+        color: rgba(0,0,0,0.8);
+      }
+
+      i {
+        font-size: 3rem;
+        background: transparent;
+      }
+    }
+
+    progress {
+      height: 0.4rem;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      border: none;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
+
+    .current-question-number {
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
   }
 }
