@@ -331,7 +331,8 @@ p.paragraph {
     width: 100%;
     border: none;
     background-color: rgba(0,0,0,0.1);
-    color: rgba(0,0,0,0.8);
+    /*color: rgba(0,0,0,0.8);*/
+    color: #fff;
     font-size: 1em;
     line-height: 3rem;
     -webkit-transition: opacity 0.3s;
