@@ -1,0 +1,7 @@
+{
+  "name": "rember",
+  "dependencies": {
+    "semantic-ui-calendar": "^0.0.8",
+    "semantic-ui": "^2.2.11"
+  }
+}
