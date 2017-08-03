@@ -1,6 +1,6 @@
 <input type='text' class="question-message" />
 {{ui-calendar date=date onChange=(action (mut date)) placeholder="Select date and time" class="question-datetime"}}
-<input type='text' class="question-phone" />
+{{phone-number-input unmaskedValue=foo extensions=false class="question-phone"}}
 <button class="next-question">
 </button>
 
