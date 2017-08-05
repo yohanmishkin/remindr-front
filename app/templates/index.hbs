@@ -1,10 +1,12 @@
-<input type='text' class="question-message" />
-{{ui-calendar date=date onChange=(action (mut date)) placeholder="Select date and time" class="question-datetime"}}
-{{phone-number-input unmaskedValue=foo extensions=false class="question-phone"}}
-<button class="next-question">
-</button>
+<div class="questions">
+	<input type='text' class="question-message" />
+	{{ui-calendar date=date onChange=(action (mut date)) placeholder="Select date and time" class="question-datetime"}}
+	{{phone-number-input unmaskedValue=foo extensions=false class="question-phone"}}
+	<button class="next-question">
+	</button>
 
-{{stripe-checkout
-	amount=100
-	label="Schedule reminder"
-	class="stripe-checkout"}}
+	{{stripe-checkout
+		amount=100
+		label="Schedule reminder"
+		class="stripe-checkout"}}
+</div>
