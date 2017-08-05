@@ -14,5 +14,6 @@ export default create({
   clickNext: clickable('.next-question'),
   isMessageQuestionVisible: isVisible('.question-message'),
   isDatetimeQuestionVisible: isVisible('.question-datetime'),
-  isPhoneQuestionVisible: isVisible('.question-phone')
+  isPhoneQuestionVisible: isVisible('.question-phone'),
+  isPaymentButtonVisible: isVisible('.stripe-checkout')
 });

@@ -1,11 +1,13 @@
-<div class="questions">
-	{{component currentQuestion}}
-	<button {{action 'nextQuestion'}} class="next-question">
-    <i class="material-icons">keyboard_arrow_right</i>
-	</button>
-
+{{#if isAskingQuestions}}
+	<div class="questions">
+		{{component currentQuestion}}
+		<button {{action 'nextQuestion'}} class="next-question">
+	    <i class="material-icons">keyboard_arrow_right</i>
+		</button>
+	</div>
+{{else}}
 	{{stripe-checkout
 		amount=100
 		label="Schedule reminder"
 		class="stripe-checkout"}}
-</div>
+{{/if}}

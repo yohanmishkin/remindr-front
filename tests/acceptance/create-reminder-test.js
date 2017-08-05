@@ -12,6 +12,7 @@ test('I should be able to create reminder', function(assert) {
     assert.ok(page.isMessageQuestionVisible, 'Message question visible');
     assert.notOk(page.isDatetimeQuestionVisible, 'Datetime question not visible');
     assert.notOk(page.isPhoneQuestionVisible, 'Phone question not visible');
+    assert.notOk(page.isPaymentButtonVisible, 'Payment button not visible');
   });
 
   page
@@ -22,6 +23,7 @@ test('I should be able to create reminder', function(assert) {
     assert.notOk(page.isMessageQuestionVisible, 'Message question not visible');
     assert.ok(page.isDatetimeQuestionVisible, 'Datetime question visible');
     assert.notOk(page.isPhoneQuestionVisible, 'Phone question not visible');
+    assert.notOk(page.isPaymentButtonVisible, 'Payment button not visible');
   });
 
   page
@@ -32,13 +34,14 @@ test('I should be able to create reminder', function(assert) {
     assert.notOk(page.isMessageQuestionVisible, 'Message question not visible');
     assert.notOk(page.isDatetimeQuestionVisible, 'Datetime question not visible');
     assert.ok(page.isPhoneQuestionVisible, 'Phone question visible');
+    assert.notOk(page.isPaymentButtonVisible, 'Payment button not visible');
   });
 
   page
     .enterPhoneNumber('123-123-1234')
     .clickNext();
-
+ 
   andThen(() => {
-    assert.ok(page.contains('Schedule reminder'), 'Checkout appears');
+    assert.ok(page.isPaymentButtonVisible, 'Payment button visible');
   });
 });

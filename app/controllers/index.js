@@ -6,6 +6,13 @@ export default Ember.Controller.extend({
 	currentQuestion: Ember.computed('questionNumber', function() {
 		return this.get('questions')[this.get('questionNumber')];
 	}),
+	isAskingQuestions: Ember.computed('questionNumber', function() {
+		let numberOfQuestions = this.get('questions').length;
+		if (this.get('questionNumber') < numberOfQuestions) {
+			return true;
+		}
+		return false;
+	}),
 
 	actions: {
 		nextQuestion() {
