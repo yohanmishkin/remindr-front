@@ -24,12 +24,13 @@ module.exports = function(environment) {
     },
 
     stripe: {
-      key: "pk_test_C0sa3IlkLWBlrB8laH2fbqfh",
-      name: "My Company"
+      key: "pk_test_qsLjDBy23VjeZ0dASm1t5Gws",
+      name: "Reminder.tel"
     }
   };
 
   if (environment === 'development') {
+    ENV.host = 'https://d5go6mao4a.execute-api.us-east-1.amazonaws.com/dev/'
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;

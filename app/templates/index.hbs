@@ -8,6 +8,9 @@
 {{else}}
 	{{stripe-checkout
 		amount=100
+		name='Reminder.tel'
+		description='Paying for 1 reminder'
 		label="Schedule reminder"
-		class="stripe-checkout"}}
+		class="stripe-checkout"
+		onToken=(action 'processStripeToken')}}
 {{/if}}
