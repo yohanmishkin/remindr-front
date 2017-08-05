@@ -1,8 +1,9 @@
 <div class="questions">
-	<input type='text' class="question-message" />
-	{{ui-calendar date=date onChange=(action (mut date)) placeholder="Select date and time" class="question-datetime"}}
-	{{phone-number-input unmaskedValue=foo extensions=false class="question-phone"}}
+	{{question-message}}
+	{{question-datetime}}
+	{{question-phone}}
 	<button class="next-question">
+    <i class="material-icons">keyboard_arrow_right</i>
 	</button>
 
 	{{stripe-checkout
