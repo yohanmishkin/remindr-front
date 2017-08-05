@@ -2,7 +2,8 @@ import {
   create,
   visitable,
   fillable,
-  clickable
+  clickable,
+  isVisible
 } from 'ember-cli-page-object';
 
 export default create({
@@ -10,5 +11,8 @@ export default create({
   enterMessage: fillable('.question-message'),
   enterDateTime: fillable('.question-datetime input'),
   enterPhoneNumber: fillable('.question-phone'),
-  clickNext: clickable('.next-question')
+  clickNext: clickable('.next-question'),
+  isMessageQuestionVisible: isVisible('.question-message'),
+  isDatetimeQuestionVisible: isVisible('.question-datetime'),
+  isPhoneQuestionVisible: isVisible('.question-phone')
 });

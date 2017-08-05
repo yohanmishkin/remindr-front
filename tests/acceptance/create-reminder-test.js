@@ -6,11 +6,35 @@ moduleForAcceptance('Acceptance | create reminder');
 
 test('I should be able to create reminder', function(assert) {
   page
-    .visitLandingPage()
+    .visitLandingPage();
+
+  andThen(() => {
+    assert.ok(page.isMessageQuestionVisible, 'Message question visible');
+    assert.notOk(page.isDatetimeQuestionVisible, 'Datetime question not visible');
+    assert.notOk(page.isPhoneQuestionVisible, 'Phone question not visible');
+  });
+
+  page
     .enterMessage('Please remind me to do this')
-    .clickNext()
+    .clickNext();
+
+  andThen(() => {
+    assert.notOk(page.isMessageQuestionVisible, 'Message question not visible');
+    assert.ok(page.isDatetimeQuestionVisible, 'Datetime question visible');
+    assert.notOk(page.isPhoneQuestionVisible, 'Phone question not visible');
+  });
+
+  page
     .enterDateTime(new Date((new Date()).getTime() + 1 * 86400000))
-    .clickNext()
+    .clickNext();
+
+  andThen(() => {
+    assert.notOk(page.isMessageQuestionVisible, 'Message question not visible');
+    assert.notOk(page.isDatetimeQuestionVisible, 'Datetime question not visible');
+    assert.ok(page.isPhoneQuestionVisible, 'Phone question visible');
+  });
+
+  page
     .enterPhoneNumber('123-123-1234')
     .clickNext();
 
