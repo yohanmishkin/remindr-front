@@ -29,7 +29,7 @@ export default Controller.extend({
 			this.set('questionNumber', this.get('questionNumber') + 1);
 		},
 		processStripeToken({card, email, id}) {
-			return this.get('ajax').request(`${ENV.host}/purchase`, {
+			return this.get('ajax').request(`${ENV.host}`, {
 				method: 'POST',
 				data: {card, email, id}
 			}).then(() => {
