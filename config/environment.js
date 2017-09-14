@@ -30,7 +30,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV.host = 'https://d5go6mao4a.execute-api.us-east-1.amazonaws.com/dev/'
+    ENV.host = 'https://loj0nzibhg.execute-api.us-east-1.amazonaws.com/dev/charge'
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
